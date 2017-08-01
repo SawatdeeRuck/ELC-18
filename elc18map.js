@@ -6,10 +6,10 @@ function init() {
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
-        zoom: 14,
+        zoom: 13,
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(26.3411533,-80.0909687), // Boca Resort -- Boca Raton Florida
+        center: new google.maps.LatLng(26.3408325,-80.1098175), // Boca Resort -- Boca Raton Florida
 
         // How you would like to style the map. 
         // This is where you would paste any style found on Snazzy Maps.
@@ -120,7 +120,7 @@ function init() {
 
     // Let's also add a marker while we're at it
     var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(26.3411533,-80.0909687),
+        position: new google.maps.LatLng(26.341977, -80.078330),
         map: map,
         title: 'Boca Resort'
     });
