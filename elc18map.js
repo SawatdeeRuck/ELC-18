@@ -6,7 +6,7 @@ function init() {
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
-        zoom: 16,
+        zoom: 17,
 
         // The latitude and longitude to center the map (always required)
         center: new google.maps.LatLng(26.3415378,-80.0809695), // Boca Resort -- Boca Raton Florida
@@ -14,36 +14,101 @@ function init() {
         // How you would like to style the map. 
         // This is where you would paste any style found on Snazzy Maps.
         styles: 
-            [
-                {
-                    "stylers": [
-                        {
-                            "hue": "#dd0d0d"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road",
-                    "elementType": "labels",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "lightness": 100
-                        },
-                        {
-                            "visibility": "simplified"
-                        }
-                    ]
-                }
-            ]
+[
+    {
+        "featureType": "administrative.country",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "lightness": -5
+            },
+            {
+                "color": "#b0b0b0"
+            },
+            {
+                "weight": 1.7
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.province",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#FFB3B3"
+            },
+            {
+                "lightness": 26
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#FFB3B3"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#FFB3B3"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#FFB3B3"
+            },
+            {
+                "lightness": 66
+            }
+        ]
+    }
+]
     };
 
     // Get the HTML DOM element that will contain your map 
@@ -55,8 +120,8 @@ function init() {
 
     // Let's also add a marker while we're at it
     var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(38.894013,-77.027182),
+        position: new google.maps.LatLng(26.3415378,-80.0809695),
         map: map,
-        title: 'Trump Hotel International'
+        title: 'Boca Resort'
     });
 }
