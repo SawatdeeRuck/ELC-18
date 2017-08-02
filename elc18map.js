@@ -124,4 +124,10 @@ function init() {
         map: map,
         title: 'Boca Resort'
     });
+
+    google.maps.event.addDomListener(window, 'resize', function() {
+    var center = map.getCenter();
+    map.setCenter(center);
+});
+
 }
